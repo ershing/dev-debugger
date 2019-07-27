@@ -2,7 +2,7 @@
   "name": "dev-debugger",
   "version": "1.0.0",
   "description": "a debugger tool for js code development",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "jest",
     "build": "tsc"
