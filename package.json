@@ -1,0 +1,29 @@
+{
+  "name": "dev-debugger",
+  "version": "1.0.0",
+  "description": "a debugger tool for js code development",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ershing/dev-debugger.git"
+  },
+  "keywords": [
+    "debugger"
+  ],
+  "author": "ershing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ershing/dev-debugger/issues"
+  },
+  "homepage": "https://github.com/ershing/dev-debugger#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
