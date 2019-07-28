@@ -15,7 +15,7 @@ npm i dev-debugger -S
 
 ### Data replace
 ```js
-import DevDebugger from 'dev-debugger'
+import { DevDebugger } from 'dev-debugger'
 
 //if you rely on the enviroment, you can do it like this
 let debug = process.env.NODE_ENV === "development" 
@@ -37,7 +37,7 @@ var data = _r(1, 100)
 
 ### Data replace By Tag
 ```js
-import DevDebugger from 'dev-debugger'
+import { DevDebugger } from 'dev-debugger'
 
 //if you rely on the enviroment, you can do it like this
 let debug = process.env.NODE_ENV === "development" 
@@ -70,7 +70,7 @@ var data = _rt(1, 'baseData')
 
 ### Get the replace history
 ```js
-import DevDebugger from 'dev-debugger'
+import { DevDebugger } from 'dev-debugger'
 
 let debug = process.env.NODE_ENV === "development" 
 

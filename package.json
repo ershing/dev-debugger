@@ -6,7 +6,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc --module commonjs"
   },
   "repository": {
     "type": "git",
