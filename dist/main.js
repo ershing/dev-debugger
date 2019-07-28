@@ -44,4 +44,4 @@ var DevDebugger = /** @class */ (function () {
     };
     return DevDebugger;
 }());
-exports.default = DevDebugger;
+exports.DevDebugger = DevDebugger;

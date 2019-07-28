@@ -7,8 +7,7 @@ interface debuggerConfig {
     hisLen?: number,
     data?: object
 }
-
-class DevDebugger {
+export class DevDebugger {
     public data: object
     public debugHistory: Array<{ debugVal: any[] } | { debugCaseTag: any[] }> = []
     private debug: boolean
@@ -53,6 +52,8 @@ class DevDebugger {
     }
 }
 
-export default DevDebugger
+
+
+
 
 
