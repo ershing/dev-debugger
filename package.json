@@ -1,6 +1,6 @@
 {
   "name": "dev-debugger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a debugger tool for js code development",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
