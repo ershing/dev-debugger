@@ -17,11 +17,8 @@ npm i dev-debugger -S
 ```js
 import DevDebugger from 'dev-debugger'
 
-//if you rely on the enviroment, you can do it like this
-let debug = process.env.NODE_ENV === "development" 
-
-let devDebugger = new DevDebugger({ debug })
-let _r = devDebugger.debugVal.bind(devDebugger)
+let dbg = new DevDebugger({ debug: true }) //if you don't want to test the data,set debug false
+let _r = dbg.debugVal.bind(dbg)
 
 /*
 ...some code
@@ -39,13 +36,10 @@ var data = _r(1, 100)
 ```js
 import DevDebugger from 'dev-debugger'
 
-//if you rely on the enviroment, you can do it like this
-let debug = process.env.NODE_ENV === "development" 
-
-let devDebugger = new DevDebugger({ 
-        debug,
+let dbg = new DevDebugger({ 
+        debug: true,
         caseName: 'testInit',  //you need to tell what case to debug
-        cases: {  //case names
+        cases: {  //cases include
             'testInit': {
                 'baseData': 100  //supply value to the tag you name
             },
@@ -54,7 +48,7 @@ let devDebugger = new DevDebugger({
             }
         }
     })
-let _rt = devDebugger.debugCaseTag.bind(devDebugger)
+let _rt = dbg.debugCaseTag.bind(dbg)
 
 /*
 ...some code
@@ -70,10 +64,11 @@ var data = _rt(1, 'baseData')
 
 ### Get the replace history
 ```js
-let history = devDebugger.debugHistory
+let history = dbg.debugHistory
 ```
 
-## Build with babel plugin (not finish)
+
+## Build with babel plugin
 if you don't want to remove the 'dev-debugger' code, you can use the babel plugin babel-plugin-dev-debugger
 
 ### install plugin
@@ -82,7 +77,7 @@ npm i babel-plugin-dev-debugger -D
 ```
 
 ### plugin usage
-you can change your file babel.config.js just like this
+you can modify your file babel.config.js just like this
 ```js
 module.exports =  {
   "plugins": process.env.NODE_ENV === "production" ? ["babel-plugin-dev-debugger"] : []
@@ -90,5 +85,5 @@ module.exports =  {
 ```
 
 ### notice
-use function debugVal or debugCaseTag just like the demo to avoid errors
+if you want to use the plugin, use the package 'dev-debugger' in single file and don't pass methods of the instance to other variables
 
