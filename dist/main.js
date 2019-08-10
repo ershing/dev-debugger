@@ -4,16 +4,16 @@ var DevDebugger = /** @class */ (function () {
     function DevDebugger(config) {
         this.config = config;
         this.debugHistory = [];
-        this.hisLen = 0;
+        this.historyLen = 0;
         this.useCaseCheck = false;
         this.usingCase = {};
         this.debug = config.debug;
-        this.hisLen = config.hisLen || 10000;
+        this.historyLen = config.historyLen || 10000;
         this.data = config.data || {};
     }
     DevDebugger.prototype.markAsHistory = function (item) {
-        var hisLen = this.debugHistory.length;
-        if (hisLen >= this.hisLen) {
+        var historyLen = this.debugHistory.length;
+        if (historyLen >= this.historyLen) {
             this.debugHistory.shift();
         }
         this.debugHistory.push(item);
@@ -44,4 +44,4 @@ var DevDebugger = /** @class */ (function () {
     };
     return DevDebugger;
 }());
-exports.DevDebugger = DevDebugger;
+exports.default = DevDebugger;

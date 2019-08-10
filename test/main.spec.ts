@@ -83,7 +83,7 @@ test('need cases and caseName to use debugCaseTag', () => {
 
 test('check the replace history', () => {
     var devDebug1 = new DevDebugger({ debug: true })
-    var devDebug2 = new DevDebugger({ debug: true, hisLen: 20000 })
+    var devDebug2 = new DevDebugger({ debug: true, historyLen: 20000 })
     for (let i = 0; i < 999999; i++) {
         devDebug1.debugVal(1, 2);
         devDebug2.debugVal(1, 2);

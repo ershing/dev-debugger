@@ -6,10 +6,10 @@ interface debuggerConfig {
             [tagName: string]: any;
         };
     };
-    hisLen?: number;
+    historyLen?: number;
     data?: object;
 }
-export declare class DevDebugger {
+export default class DevDebugger {
     config: debuggerConfig;
     data: object;
     debugHistory: Array<{
@@ -18,7 +18,7 @@ export declare class DevDebugger {
         debugCaseTag: any[];
     }>;
     private debug;
-    private hisLen;
+    private historyLen;
     private useCaseCheck;
     private usingCase;
     constructor(config: debuggerConfig);

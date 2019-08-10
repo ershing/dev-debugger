@@ -4,24 +4,24 @@ interface debuggerConfig {
     cases?: {
         [caseName: string]: { [tagName: string]: any }
     },
-    hisLen?: number,
+    historyLen?: number,
     data?: object
 }
-export class DevDebugger {
+export default class DevDebugger {
     public data: object
     public debugHistory: Array<{ debugVal: any[] } | { debugCaseTag: any[] }> = []
     private debug: boolean
-    private hisLen: number = 0
+    private historyLen: number = 0
     private useCaseCheck: boolean = false
     private usingCase: { [tagName: string]: any } = {}
     constructor(public config: debuggerConfig) {
         this.debug = config.debug
-        this.hisLen = config.hisLen || 10000
+        this.historyLen = config.historyLen || 10000
         this.data = config.data || {}
     }
     markAsHistory(item: { debugVal: any[] } | { debugCaseTag: any[] }) {
-        let hisLen = this.debugHistory.length
-        if (hisLen >= this.hisLen) {
+        let historyLen = this.debugHistory.length
+        if (historyLen >= this.historyLen) {
             this.debugHistory.shift()
         }
         this.debugHistory.push(item)
