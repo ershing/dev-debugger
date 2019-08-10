@@ -73,7 +73,7 @@ var data = _rt(1, 'baseData')
 let history = devDebugger.debugHistory
 ```
 
-## Build with babel plugin
+## Build with babel plugin (not finish)
 if you don't want to remove the 'dev-debugger' code, you can use the babel plugin babel-plugin-dev-debugger
 
 ### install plugin
