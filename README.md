@@ -69,7 +69,7 @@ let history = dbg.debugHistory
 
 
 ## Build with babel plugin
-if you want to remove the 'dev-debugger' code in production mode, you can use the babel plugin babel-plugin-dev-debugger
+if you want to remove the 'dev-debugger' code in production mode, you can use the babel plugin [babel-plugin-dev-debugger](https://github.com/ershing/babel-plugin-dev-debugger)
 
 ### install plugin
 ```bash
